@@ -1,0 +1,15 @@
+{
+  "name": "proshop-z",
+  "version": "1.0.0",
+  "description": "eCommerce application built with the MERN Stack",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "author": "Zabihulla Shaik",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

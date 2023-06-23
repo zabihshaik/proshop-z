@@ -13,6 +13,7 @@
   "author": "Zabihulla Shaik",
   "license": "MIT",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "express": "^4.18.2",
     "mongoose": "^7.3.1"
   },

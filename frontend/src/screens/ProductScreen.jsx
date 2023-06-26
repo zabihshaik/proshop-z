@@ -38,7 +38,7 @@ const ProductScreen = () => {
                         <Rating value={product.rating} text={`${product.numReviews} reviews`} />
                     </ListGroupItem>
                     <ListGroupItem>Price: ${product.price}</ListGroupItem>
-                    <ListGroupItem>Description: ${product.description}</ListGroupItem>
+                    <ListGroupItem>Description: {product.description}</ListGroupItem>
                 </ListGroup>
             </Col>
             <Col md={3}>

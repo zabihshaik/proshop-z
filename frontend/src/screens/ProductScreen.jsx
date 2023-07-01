@@ -1,7 +1,8 @@
 import React from 'react';
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { Row, Col, Image, ListGroup, Card, Button, ListGroupItem } from 'react-bootstrap';
+import { Row, Col, Image, ListGroup, Card, Button, ListGroupItem, Form } from 'react-bootstrap';
 import Rating from '../components/Rating';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
@@ -12,7 +13,10 @@ const ProductScreen = () => {
 
     const  { id: productId } = useParams();
 
+    const [qty, setQty] = useState(1);
+
     const { data: product, isLoading, error } = useGetProductDetailsQuery(productId);
+    // console.log([...Array(product.countInStock).keys()]);
    
   return (
     <>
@@ -60,6 +64,23 @@ const ProductScreen = () => {
                             </Col>
                         </Row>
                     </ListGroupItem>
+
+                    { product.countInStock > 0 && (
+                        <ListGroup.Item>
+                            <Row>
+                                <Col>Qty</Col>
+                                <Col>
+                                    <Form.Control 
+                                    as='select' 
+                                    value={qty} 
+                                    onChange={(e) => setQty(Number(e.target.value))}>
+                                        {[...Array(product.countInStock).keys()]}
+                                    </Form.Control>
+                                </Col>
+                            </Row>
+                        </ListGroup.Item>
+                    ) }
+
                     <ListGroupItem>
                         <Button className='btn-block' type='button' disabled={product.countInStock===0}>
                             Add To Cart

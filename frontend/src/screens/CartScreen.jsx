@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Row, Col, ListGroup, Image, Form, Button, Card, ListGroupItem } from 'react-bootstrap';
 import { FaTrash } from 'react-icons/fa';
 import Message from '../components/Message';
+import { addToCart } from '../slices/cartSlice';
 
 const CartScreen = () => {
     const navigate = useNavigate();
@@ -11,6 +12,10 @@ const CartScreen = () => {
 
     const cart = useSelector((state) => state.cart);
     const { cartItems } = cart;
+
+    const addToCartHandler = async (product, qty) => {
+        dispatch(addToCart({...product, qty}));
+    }
 
   return (
     <Row>
@@ -38,7 +43,7 @@ const CartScreen = () => {
                                 <Form.Control 
                                     as='select' 
                                     value={item.qty} 
-                                    onChange={(e) => {}}>
+                                    onChange={(e) => addToCartHandler(item, Number(e.target.value))}>
                                         {[...Array(item.countInStock).keys()].map((x) => (
                                             <option key={x + 1} value={x + 1}>
                                                 {x + 1}

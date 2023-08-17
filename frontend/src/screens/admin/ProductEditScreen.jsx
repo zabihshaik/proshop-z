@@ -74,12 +74,13 @@ const ProductEditScreen = () => {
 
     return (
         <>
-            <Link to='/admin/productList' className='btn btn-light my-3'> 
+            <Link to='/admin/productlist' className='btn btn-light my-3'> 
                 Go Back
             </Link>
             <FormContainer>
                 <h1>Edit Product</h1>
                 {loadingUpdate && <Loader />}
+                {loadingUpload && <Loader />}
 
                 {isLoading ? <Loader /> : error ? <Message variant='danger'>
                     {error}</Message> : (

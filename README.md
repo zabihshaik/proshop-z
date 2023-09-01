@@ -1,24 +1,60 @@
 # ProShop-Z
 
-Ecommerce Website created using MERN Stack including Redux Toolkit in the Frontend.
+A Full Stack Ecommerce Web App created using MERN Stack including Redux Toolkit in the Frontend, deployed on Render.
 
-Tech Stack used:
+**Deployed Link:**
+
+https://proshop-z.onrender.com/
+
+Some screenshots:
+
+Home Page:
+
+![1](https://github.com/zabihshaik/proshop-z/assets/91183455/3fe4ed13-4955-4288-978f-a0bbc4e1e258)
+
+![2](https://github.com/zabihshaik/proshop-z/assets/91183455/a5a6d504-e5a6-4ea1-90b7-8d00ab220407)
+
+Product Page:
+
+![product page](https://github.com/zabihshaik/proshop-z/assets/91183455/b1a00416-0ce8-44e3-aaa5-03a0346ad59b)
+
+Empty Cart Page:
+
+![Empty Cart Page](https://github.com/zabihshaik/proshop-z/assets/91183455/f601dbc1-6e4a-48f0-8c1c-0e8358faeb2e)
+
+SignUp Page:
+
+![Sign Up page](https://github.com/zabihshaik/proshop-z/assets/91183455/2ed8b14e-e85c-4689-baa3-1bebf71fbef1)
+
+Sign In Page:
+
+![Sign In page](https://github.com/zabihshaik/proshop-z/assets/91183455/8f86b487-4f98-4bcc-97f3-e6c716e764ba)
+
+
+
+
+
+
+
+## Tech Stack used:
 
 Frontend:
 
-1. ReactJS
-2. React Bootstrap
-3. Redux
-4. Redux Toolkit
+- ReactJS
+-  React Bootstrap
+- Redux
+- Redux Toolkit
 
 Backend:
 
-1. NodeJS
-2. ExpressJS
+- NodeJS
+- ExpressJS
 
 Database:
 
-1. MongoDB
+- MongoDB
+
+#
 
 - [Features](#features)
 - [Usage](#usage)
